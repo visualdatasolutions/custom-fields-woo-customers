@@ -33,11 +33,11 @@ function cio_showv($v) {
  */ 
 if (is_multisite()) {
 
-	$cio_cfwc_active_plugins = array_merge(array_keys(get_site_option('active_sitewide_plugins')), get_option( 'active_plugins' ));
+	$cio_cfwc_active_plugins = array_merge(array_keys(get_site_option('active_sitewide_plugins', array())), get_option( 'active_plugins', array() ));
 	
 } else {
 
-	$cio_cfwc_active_plugins = get_option( 'active_plugins' );
+	$cio_cfwc_active_plugins = get_option( 'active_plugins', array() );
 }
 
 	
